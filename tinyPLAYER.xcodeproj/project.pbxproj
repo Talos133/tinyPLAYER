@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1464DE2D83D4BE8A25E06448 /* tinyPLAYER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 856968B170E1D220A7F81945 /* tinyPLAYER.xcdatamodeld */; };
 		4F7B6496D4A61ADCAEFB649B /* tinyPLAYERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C1BEA94CDCC85ACA3AFC5 /* tinyPLAYERApp.swift */; };
+		692609796E35BC55ABAA6F0C /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CBC91E93D77833EA29FBF4 /* Color+Hex.swift */; };
+		77EFA25F48FF83DB0BCF0018 /* ColorHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */; };
 		93050F2F9F61D736A158A3DC /* tinyPLAYERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86678DA3A414B6F95A744 /* tinyPLAYERTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +30,9 @@
 		7A7018CED0506A8820A3B5AB /* tinyPLAYER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tinyPLAYER.xcdatamodel; sourceTree = "<group>"; };
 		A8BC033F398381814432C3F6 /* tinyPLAYER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinyPLAYER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15C1BEA94CDCC85ACA3AFC5 /* tinyPLAYERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinyPLAYERApp.swift; sourceTree = "<group>"; };
+		B2CBC91E93D77833EA29FBF4 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		C79B423769EE9A91B95F7FD5 /* tinyPLAYERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tinyPLAYERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -49,6 +53,7 @@
 		4937A0328FC12BD1156017C0 /* tinyPLAYERTests */ = {
 			isa = PBXGroup;
 			children = (
+				E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */,
 				1EE86678DA3A414B6F95A744 /* tinyPLAYERTests.swift */,
 			);
 			path = tinyPLAYERTests;
@@ -75,6 +80,7 @@
 		BA2964BC7133AB3F3E81B293 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				B2CBC91E93D77833EA29FBF4 /* Color+Hex.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692609796E35BC55ABAA6F0C /* Color+Hex.swift in Sources */,
 				1464DE2D83D4BE8A25E06448 /* tinyPLAYER.xcdatamodeld in Sources */,
 				4F7B6496D4A61ADCAEFB649B /* tinyPLAYERApp.swift in Sources */,
 			);
@@ -205,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EFA25F48FF83DB0BCF0018 /* ColorHexTests.swift in Sources */,
 				93050F2F9F61D736A158A3DC /* tinyPLAYERTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
