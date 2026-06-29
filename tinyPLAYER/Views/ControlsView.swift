@@ -17,8 +17,16 @@ struct ControlsView: View {
                 Capsule().fill(theme.current.border).frame(height: 3)
                 Capsule()
                     .fill(theme.current.accent)
-                    .frame(width: geo.size.width * music.playbackProgress, height: 3)
+                    .frame(width: geo.size.width * min(max(music.playbackProgress, 0), 1), height: 3)
             }
+            .contentShape(Rectangle())
+            .gesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged { value in
+                        let progress = min(max(value.location.x / geo.size.width, 0), 1)
+                        Task { try? await music.seek(to: progress) }
+                    }
+            )
         }
         .frame(height: 3)
     }

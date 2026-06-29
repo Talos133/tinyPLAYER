@@ -43,6 +43,15 @@ final class MusicService: MusicServiceProtocol, ObservableObject {
     func skipToNext()     async throws { try await player.skipToNextEntry() }
     func skipToPrevious() async throws { try await player.skipToPreviousEntry() }
 
+    func seek(to progress: Double) async throws {
+        let player = ApplicationMusicPlayer.shared
+        // Get duration from current queue entry
+        guard let entry = player.queue.currentEntry,
+              let endTime = entry.endTime,
+              endTime > 0 else { return }
+        player.playbackTime = progress * endTime
+    }
+
     func addToLibrary() async throws {
         // MusicLibrary.shared.add(_:) is unavailable on macOS.
         // Adding to library on macOS requires using the Music.app AppleScript API

@@ -19,12 +19,12 @@ struct ArtworkView: View {
             }
         }
         .frame(width: size, height: size)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
         .shadow(color: .black.opacity(0.35), radius: 8, x: 0, y: 4)
     }
 
     private var placeholder: some View {
-        RoundedRectangle(cornerRadius: 8)
+        RoundedRectangle(cornerRadius: 12)
             .fill(theme.current.bgPanel)
             .overlay(
                 Image(systemName: "music.note")

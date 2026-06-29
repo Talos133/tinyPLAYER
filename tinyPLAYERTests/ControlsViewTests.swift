@@ -80,6 +80,17 @@ final class ControlsViewTests: XCTestCase {
         XCTAssertEqual(music.playbackProgress, 0.0)
     }
 
+    // MARK: - Seek
+
+    func test_seekUpdatesProgress() async throws {
+        let mock = MockMusicService()
+        mock.playbackProgress = 0.5
+        try await mock.seek(to: 0.75)
+        XCTAssertEqual(mock.lastSeekProgress, 0.75, accuracy: 0.001)
+        XCTAssertEqual(mock.playbackProgress, 0.75, accuracy: 0.001)
+        XCTAssertTrue(mock.seekCalled)
+    }
+
     // MARK: - Call counts are independent per instance
 
     func test_playCallCount_startsAtZero() {

@@ -19,6 +19,8 @@ final class MockMusicService: MusicServiceProtocol, ObservableObject {
     var skipPrevCalled          = false
     var addToLibraryCalled      = false
     var removeFromLibraryCalled = false
+    var seekCalled              = false
+    var lastSeekProgress: Double = 0
 
     func play()              async throws { playCalled = true;  isPlaying = true  }
     func pause()                         { pauseCalled = true; isPlaying = false }
@@ -27,4 +29,9 @@ final class MockMusicService: MusicServiceProtocol, ObservableObject {
     func addToLibrary()      async throws { addToLibraryCalled = true;     inLibrary = true  }
     func removeFromLibrary() async throws { removeFromLibraryCalled = true; inLibrary = false }
     func requestAuthorization() async {}
+    func seek(to progress: Double) async throws {
+        seekCalled = true
+        lastSeekProgress = progress
+        playbackProgress = progress
+    }
 }

@@ -19,4 +19,5 @@ protocol MusicServiceProtocol: AnyObject, ObservableObject {
     func addToLibrary()      async throws
     func removeFromLibrary() async throws
     func requestAuthorization() async
+    func seek(to progress: Double) async throws
 }
