@@ -30,6 +30,12 @@ protocol RadioProvider {
     /// Adds songs to an existing playlist.
     /// Note: `MusicLibrary.shared.add(_:to:)` is unavailable on macOS.
     func addTracks(_ songs: [MusicKit.Song], to playlist: MusicKit.Playlist) async throws
+
+    /// Fetches a single user playlist by ID. Returns `nil` when not found.
+    func fetchPlaylist(id: MusicKit.Playlist.ID) async throws -> MusicKit.Playlist?
+
+    /// Returns all playlists in the user's library.
+    func userPlaylists() async throws -> MusicItemCollection<MusicKit.Playlist>
 }
 
 // MARK: - Live RadioProvider
@@ -78,6 +84,18 @@ final class LiveRadioProvider: RadioProvider {
         // `MusicLibrary.shared.add(_:to:)` is @available(macOS, unavailable).
         // Same SDK limitation as createPlaylist — deferred.
         throw RadioError.unavailableOnMacOS
+    }
+
+    func fetchPlaylist(id: MusicKit.Playlist.ID) async throws -> MusicKit.Playlist? {
+        var request = MusicLibraryRequest<MusicKit.Playlist>()
+        request.filter(matching: \.id, equalTo: id)
+        let response = try await request.response()
+        return response.items.first
+    }
+
+    func userPlaylists() async throws -> MusicItemCollection<MusicKit.Playlist> {
+        let request = MusicLibraryRequest<MusicKit.Playlist>()
+        return try await request.response().items
     }
 }
 
@@ -136,10 +154,12 @@ final class RadioService: ObservableObject {
     /// Note: Playlist write APIs are unavailable on macOS via MusicKit.
     func addTrackToPlaylist(_ track: MusicKit.Song,
                             playlistID: MusicKit.Playlist.ID) async throws {
-        var request = MusicLibraryRequest<MusicKit.Playlist>()
-        request.filter(matching: \.id, equalTo: playlistID)
-        let response = try await request.response()
-        guard let playlist = response.items.first else { return }
+        guard let playlist = try await provider.fetchPlaylist(id: playlistID) else { return }
         try await provider.addTracks([track], to: playlist)
+    }
+
+    /// Returns all playlists in the user's library.
+    func userPlaylists() async throws -> MusicItemCollection<MusicKit.Playlist> {
+        return try await provider.userPlaylists()
     }
 }

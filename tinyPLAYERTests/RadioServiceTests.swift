@@ -13,15 +13,20 @@ final class MockRadioProvider: RadioProvider {
     var fetchStationTracksResult: Result<[MusicKit.Song], Error> = .success([])
     var createPlaylistResult: Result<MusicKit.Playlist, Error>?
     var addTracksResult: Result<Void, Error> = .success(())
+    var fetchPlaylistResult: Result<MusicKit.Playlist?, Error> = .success(nil)
+    var userPlaylistsResult: Result<MusicItemCollection<MusicKit.Playlist>, Error> = .success(MusicItemCollection<MusicKit.Playlist>([]))
 
     // --- Call tracking ---
     var fetchSongCalled = false
     var fetchStationTracksCalled = false
     var createPlaylistCalled = false
     var addTracksCalled = false
+    var fetchPlaylistCalled = false
+    var userPlaylistsCalled = false
     var lastSeedSongID: String?
     var lastPlaylistName: String?
     var lastTracksAdded: [MusicKit.Song] = []
+    var lastFetchedPlaylistID: MusicKit.Playlist.ID?
 
     func fetchSong(id: String) async throws -> MusicKit.Song? {
         fetchSongCalled = true
@@ -48,6 +53,17 @@ final class MockRadioProvider: RadioProvider {
         lastTracksAdded = songs
         try addTracksResult.get()
     }
+
+    func fetchPlaylist(id: MusicKit.Playlist.ID) async throws -> MusicKit.Playlist? {
+        fetchPlaylistCalled = true
+        lastFetchedPlaylistID = id
+        return try fetchPlaylistResult.get()
+    }
+
+    func userPlaylists() async throws -> MusicItemCollection<MusicKit.Playlist> {
+        userPlaylistsCalled = true
+        return try userPlaylistsResult.get()
+    }
 }
 
 // MARK: - Tests
@@ -72,7 +88,7 @@ final class RadioServiceTests: XCTestCase {
         XCTAssertFalse(sut.isGenerating, "should be false after completion (even on error)")
     }
 
-    func test_createStation_isGenerating_startsTrue() async throws {
+    func test_createStation_isGenerating_clearAfterSuccess() async throws {
         // Verify isGenerating is false both before and after a failing call.
         // In-flight observation of isGenerating mid-async is not possible on @MainActor
         // without hooks; the defer { isGenerating = false } contract is tested in
@@ -130,7 +146,7 @@ final class RadioServiceTests: XCTestCase {
         }
     }
 
-    func test_createStation_propagatesStationTracksError() async {
+    func test_createStation_propagatesFetchSongError() async {
         let provider = MockRadioProvider()
         struct StationError: Error {}
         // fetchSong returns nil so songNotFound fires before stationTracks is attempted
@@ -170,6 +186,33 @@ final class RadioServiceTests: XCTestCase {
             try await sut.saveAsPlaylist(name: "My Station")
             XCTFail("Expected RadioError.emptyQueue")
         } catch RadioError.emptyQueue {
+            // pass
+        } catch {
+            XCTFail("Unexpected error: \(error)")
+        }
+    }
+
+    // MARK: - userPlaylists: delegates to provider
+
+    func test_userPlaylists_callsProvider() async throws {
+        let provider = MockRadioProvider()
+        let sut = RadioService(provider: provider)
+
+        _ = try await sut.userPlaylists()
+
+        XCTAssertTrue(provider.userPlaylistsCalled)
+    }
+
+    func test_userPlaylists_propagatesError() async {
+        let provider = MockRadioProvider()
+        struct LibraryError: Error {}
+        provider.userPlaylistsResult = .failure(LibraryError())
+        let sut = RadioService(provider: provider)
+
+        do {
+            _ = try await sut.userPlaylists()
+            XCTFail("Expected error to be thrown")
+        } catch is LibraryError {
             // pass
         } catch {
             XCTFail("Unexpected error: \(error)")
