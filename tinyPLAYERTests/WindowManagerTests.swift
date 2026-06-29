@@ -8,6 +8,7 @@ final class WindowManagerTests: XCTestCase {
         super.setUp()
         UserDefaults.standard.removeObject(forKey: "tinyplayer_windowmode")
         UserDefaults.standard.removeObject(forKey: "tinyplayer_position")
+        UserDefaults.standard.removeObject(forKey: "tinyplayer_tuckededge")
     }
 
     func test_initialMode_isNormal() {

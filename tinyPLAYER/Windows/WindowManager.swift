@@ -10,8 +10,9 @@ final class WindowManager: NSObject, ObservableObject, NSWindowDelegate {
     private let edgeThreshold: CGFloat = 20
     private let tuckedSliver:  CGFloat = 12
 
-    private let modeKey     = "tinyplayer_windowmode"
-    private let positionKey = "tinyplayer_position"
+    private let modeKey      = "tinyplayer_windowmode"
+    private let positionKey  = "tinyplayer_position"
+    private let tuckedEdgeKey = "tinyplayer_tuckededge"
 
     init(panel: FloatingPanel) {
         self.panel = panel
@@ -96,13 +97,17 @@ final class WindowManager: NSObject, ObservableObject, NSWindowDelegate {
     }
 
     private func persistState() {
-        let modeStr: String
         switch mode {
-        case .normal:        modeStr = "normal"
-        case .mini:          modeStr = "mini"
-        case .tucked(let e): modeStr = "tucked_\(e.rawValue)"
+        case .normal:
+            UserDefaults.standard.set("normal", forKey: modeKey)
+            UserDefaults.standard.removeObject(forKey: tuckedEdgeKey)
+        case .mini:
+            UserDefaults.standard.set("mini", forKey: modeKey)
+            UserDefaults.standard.removeObject(forKey: tuckedEdgeKey)
+        case .tucked(let e):
+            UserDefaults.standard.set("tucked", forKey: modeKey)
+            UserDefaults.standard.set(e.rawValue, forKey: tuckedEdgeKey)
         }
-        UserDefaults.standard.set(modeStr, forKey: modeKey)
         UserDefaults.standard.set(NSStringFromRect(panel.frame), forKey: positionKey)
     }
 
@@ -113,10 +118,15 @@ final class WindowManager: NSObject, ObservableObject, NSWindowDelegate {
         }
         guard let modeStr = UserDefaults.standard.string(forKey: modeKey) else { return }
         switch modeStr {
-        case "mini": mode = .mini
-        case let s where s.hasPrefix("tucked_"):
-            if let edge = ScreenEdge(rawValue: String(s.dropFirst(7))) { mode = .tucked(edge) }
-        default: mode = .normal
+        case "mini":
+            mode = .mini
+        case "tucked":
+            if let edgeStr = UserDefaults.standard.string(forKey: tuckedEdgeKey),
+               let edge = ScreenEdge(rawValue: edgeStr) {
+                mode = .tucked(edge)
+            }
+        default:
+            mode = .normal
         }
     }
 }

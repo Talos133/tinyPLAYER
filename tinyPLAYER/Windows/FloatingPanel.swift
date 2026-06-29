@@ -15,4 +15,6 @@ final class FloatingPanel: NSPanel {
         hasShadow                   = true
         isReleasedWhenClosed        = false
     }
+
+    override var canBecomeKey: Bool { true }
 }
