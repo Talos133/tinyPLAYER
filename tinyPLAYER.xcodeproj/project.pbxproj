@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		098B490462B8B618369FE64F /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451B2A0D88C817E977B105EF /* ThemeManagerTests.swift */; };
+		0CB7DB73C8D970B443D0D11E /* GreekGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE5EB4351D5382CEEB6921F /* GreekGrade.swift */; };
+		101081C31C05E0110D486B06 /* SongIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DCFA78005B19B5C45805C /* SongIdentity.swift */; };
 		1464DE2D83D4BE8A25E06448 /* tinyPLAYER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 856968B170E1D220A7F81945 /* tinyPLAYER.xcdatamodeld */; };
 		4F7B6496D4A61ADCAEFB649B /* tinyPLAYERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C1BEA94CDCC85ACA3AFC5 /* tinyPLAYERApp.swift */; };
 		692609796E35BC55ABAA6F0C /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CBC91E93D77833EA29FBF4 /* Color+Hex.swift */; };
+		745E052B06E311FB95CF498F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA6197DC759F12DC3B00B5 /* ThemeManager.swift */; };
 		77EFA25F48FF83DB0BCF0018 /* ColorHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */; };
 		93050F2F9F61D736A158A3DC /* tinyPLAYERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86678DA3A414B6F95A744 /* tinyPLAYERTests.swift */; };
+		C40CF44D7B68EBF2C6845AA9 /* GreekGradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18E1BE12124E11DFB82C2B7 /* GreekGradeTests.swift */; };
+		CFF4C7AC26B212FD73C03455 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F27D400F2C63E27B13833 /* AppTheme.swift */; };
+		E7D9FE543A59C511D37B6C93 /* Palettes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0E2CF894F7BC2786114D3 /* Palettes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,13 +33,20 @@
 
 /* Begin PBXFileReference section */
 		1EE86678DA3A414B6F95A744 /* tinyPLAYERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinyPLAYERTests.swift; sourceTree = "<group>"; };
+		2D3DCFA78005B19B5C45805C /* SongIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongIdentity.swift; sourceTree = "<group>"; };
 		32C69D800C3E306B02C19150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		451B2A0D88C817E977B105EF /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
 		7A7018CED0506A8820A3B5AB /* tinyPLAYER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tinyPLAYER.xcdatamodel; sourceTree = "<group>"; };
+		7C8F27D400F2C63E27B13833 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		8DE5EB4351D5382CEEB6921F /* GreekGrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreekGrade.swift; sourceTree = "<group>"; };
 		A8BC033F398381814432C3F6 /* tinyPLAYER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinyPLAYER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15C1BEA94CDCC85ACA3AFC5 /* tinyPLAYERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinyPLAYERApp.swift; sourceTree = "<group>"; };
 		B2CBC91E93D77833EA29FBF4 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		C18E1BE12124E11DFB82C2B7 /* GreekGradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreekGradeTests.swift; sourceTree = "<group>"; };
 		C79B423769EE9A91B95F7FD5 /* tinyPLAYERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tinyPLAYERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexTests.swift; sourceTree = "<group>"; };
+		E4A0E2CF894F7BC2786114D3 /* Palettes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palettes.swift; sourceTree = "<group>"; };
+		ECAA6197DC759F12DC3B00B5 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -54,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */,
+				C18E1BE12124E11DFB82C2B7 /* GreekGradeTests.swift */,
+				451B2A0D88C817E977B105EF /* ThemeManagerTests.swift */,
 				1EE86678DA3A414B6F95A744 /* tinyPLAYERTests.swift */,
 			);
 			path = tinyPLAYERTests;
@@ -80,7 +96,10 @@
 		BA2964BC7133AB3F3E81B293 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				7C8F27D400F2C63E27B13833 /* AppTheme.swift */,
 				B2CBC91E93D77833EA29FBF4 /* Color+Hex.swift */,
+				E4A0E2CF894F7BC2786114D3 /* Palettes.swift */,
+				ECAA6197DC759F12DC3B00B5 /* ThemeManager.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -89,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				856968B170E1D220A7F81945 /* tinyPLAYER.xcdatamodeld */,
+				8DE5EB4351D5382CEEB6921F /* GreekGrade.swift */,
+				2D3DCFA78005B19B5C45805C /* SongIdentity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,7 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF4C7AC26B212FD73C03455 /* AppTheme.swift in Sources */,
 				692609796E35BC55ABAA6F0C /* Color+Hex.swift in Sources */,
+				0CB7DB73C8D970B443D0D11E /* GreekGrade.swift in Sources */,
+				E7D9FE543A59C511D37B6C93 /* Palettes.swift in Sources */,
+				101081C31C05E0110D486B06 /* SongIdentity.swift in Sources */,
+				745E052B06E311FB95CF498F /* ThemeManager.swift in Sources */,
 				1464DE2D83D4BE8A25E06448 /* tinyPLAYER.xcdatamodeld in Sources */,
 				4F7B6496D4A61ADCAEFB649B /* tinyPLAYERApp.swift in Sources */,
 			);
@@ -213,6 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77EFA25F48FF83DB0BCF0018 /* ColorHexTests.swift in Sources */,
+				C40CF44D7B68EBF2C6845AA9 /* GreekGradeTests.swift in Sources */,
+				098B490462B8B618369FE64F /* ThemeManagerTests.swift in Sources */,
 				93050F2F9F61D736A158A3DC /* tinyPLAYERTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
