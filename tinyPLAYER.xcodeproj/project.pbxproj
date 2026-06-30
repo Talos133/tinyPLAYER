@@ -16,6 +16,7 @@
 		1869965067A85955379EB184 /* WindowMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC589D8DC2704DB0819B80 /* WindowMode.swift */; };
 		197A671DD8C0C2BFC69AFF83 /* MusicServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02EF0D9C37758F12E136192 /* MusicServiceProtocol.swift */; };
 		20021C03B87EB096D211DFD9 /* ScoreStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33DDD7AAD078502C466A406 /* ScoreStore.swift */; };
+		287FD6513BA81DC29B2A9D8B /* SettingsDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B653E5959577FDBD8CA06E5 /* SettingsDrawer.swift */; };
 		2FB9A2DE7BBC45868F4692CF /* AppleScriptBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD1B5101C33491E8E9F0FE /* AppleScriptBridge.swift */; };
 		3A320766DBB353DD35862A73 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF21A0BDB0EA0B443A55AD4E /* WindowManager.swift */; };
 		3F59583FE38A9E61BC685DF5 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851DBC88313C4E078D2C725 /* SharingService.swift */; };
@@ -29,8 +30,10 @@
 		7374931C8B8E86B676F94F9E /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359C33C2429E2F7A19EAB16 /* MusicService.swift */; };
 		745E052B06E311FB95CF498F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA6197DC759F12DC3B00B5 /* ThemeManager.swift */; };
 		77EFA25F48FF83DB0BCF0018 /* ColorHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */; };
+		7B4F2B170ED315CE8471DEC0 /* ActionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB029EABEE1AA15245C13A1 /* ActionBarView.swift */; };
 		8C3B3100C0C806C4784F9CC3 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7091E3C895578DD240382 /* ControlsView.swift */; };
 		93050F2F9F61D736A158A3DC /* tinyPLAYERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86678DA3A414B6F95A744 /* tinyPLAYERTests.swift */; };
+		93CB9B8C0DA5103C2DA782A6 /* ActionBarViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83202DD54B2DCA2DC50C8D /* ActionBarViewTests.swift */; };
 		9E6B2824498BAAC5117E306E /* AppleScriptBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFEAFCC36A1096726FA96D1 /* AppleScriptBridgeTests.swift */; };
 		AE29277FA7CEF2AB28A70D61 /* MockMusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A352F433BB9B8853A6BD5F /* MockMusicService.swift */; };
 		AEC9B4698F4171AE9D724BF2 /* SharingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FF3160A712AF27AD162222 /* SharingServiceTests.swift */; };
@@ -55,18 +58,21 @@
 		07B1910C5EDC540EBCC40288 /* TrackInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoView.swift; sourceTree = "<group>"; };
 		14BD1B5101C33491E8E9F0FE /* AppleScriptBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptBridge.swift; sourceTree = "<group>"; };
 		1851DBC88313C4E078D2C725 /* SharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingService.swift; sourceTree = "<group>"; };
+		1B653E5959577FDBD8CA06E5 /* SettingsDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDrawer.swift; sourceTree = "<group>"; };
 		1EE86678DA3A414B6F95A744 /* tinyPLAYERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinyPLAYERTests.swift; sourceTree = "<group>"; };
 		2AEC589D8DC2704DB0819B80 /* WindowMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowMode.swift; sourceTree = "<group>"; };
 		2D3DCFA78005B19B5C45805C /* SongIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongIdentity.swift; sourceTree = "<group>"; };
 		32C69D800C3E306B02C19150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		39B301AF10DF723381D6AB73 /* RadioServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioServiceTests.swift; sourceTree = "<group>"; };
 		451B2A0D88C817E977B105EF /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
+		4AB029EABEE1AA15245C13A1 /* ActionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarView.swift; sourceTree = "<group>"; };
 		62A352F433BB9B8853A6BD5F /* MockMusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMusicService.swift; sourceTree = "<group>"; };
 		78FF3160A712AF27AD162222 /* SharingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingServiceTests.swift; sourceTree = "<group>"; };
 		7A7018CED0506A8820A3B5AB /* tinyPLAYER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tinyPLAYER.xcdatamodel; sourceTree = "<group>"; };
 		7C8F27D400F2C63E27B13833 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		7CFEAFCC36A1096726FA96D1 /* AppleScriptBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptBridgeTests.swift; sourceTree = "<group>"; };
 		7E1AC2A443B09DE8A857B242 /* WindowManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManagerTests.swift; sourceTree = "<group>"; };
+		7E83202DD54B2DCA2DC50C8D /* ActionBarViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarViewTests.swift; sourceTree = "<group>"; };
 		89DDB72C4C3BA95A7169C21C /* ScoreStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreStoreTests.swift; sourceTree = "<group>"; };
 		8C88D86E33A3DFE89A485C04 /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
 		8DE5EB4351D5382CEEB6921F /* GreekGrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreekGrade.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 		4937A0328FC12BD1156017C0 /* tinyPLAYERTests */ = {
 			isa = PBXGroup;
 			children = (
+				7E83202DD54B2DCA2DC50C8D /* ActionBarViewTests.swift */,
 				7CFEAFCC36A1096726FA96D1 /* AppleScriptBridgeTests.swift */,
 				E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */,
 				E13C433F53EA6CF4105B8B65 /* ControlsViewTests.swift */,
@@ -181,8 +188,10 @@
 		FD8E78BF2A84A4B798D1D5B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4AB029EABEE1AA15245C13A1 /* ActionBarView.swift */,
 				8C88D86E33A3DFE89A485C04 /* ArtworkView.swift */,
 				CBB7091E3C895578DD240382 /* ControlsView.swift */,
+				1B653E5959577FDBD8CA06E5 /* SettingsDrawer.swift */,
 				07B1910C5EDC540EBCC40288 /* TrackInfoView.swift */,
 			);
 			path = Views;
@@ -283,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4F2B170ED315CE8471DEC0 /* ActionBarView.swift in Sources */,
 				CFF4C7AC26B212FD73C03455 /* AppTheme.swift in Sources */,
 				2FB9A2DE7BBC45868F4692CF /* AppleScriptBridge.swift in Sources */,
 				FC15738B8BE97CD18F11C764 /* ArtworkView.swift in Sources */,
@@ -295,6 +305,7 @@
 				E7D9FE543A59C511D37B6C93 /* Palettes.swift in Sources */,
 				55941B1F3399DDB71A07C1C5 /* RadioService.swift in Sources */,
 				20021C03B87EB096D211DFD9 /* ScoreStore.swift in Sources */,
+				287FD6513BA81DC29B2A9D8B /* SettingsDrawer.swift in Sources */,
 				3F59583FE38A9E61BC685DF5 /* SharingService.swift in Sources */,
 				101081C31C05E0110D486B06 /* SongIdentity.swift in Sources */,
 				745E052B06E311FB95CF498F /* ThemeManager.swift in Sources */,
@@ -310,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CB9B8C0DA5103C2DA782A6 /* ActionBarViewTests.swift in Sources */,
 				9E6B2824498BAAC5117E306E /* AppleScriptBridgeTests.swift in Sources */,
 				77EFA25F48FF83DB0BCF0018 /* ColorHexTests.swift in Sources */,
 				B3DA0E5BC160AF2CEE126F9D /* ControlsViewTests.swift in Sources */,
