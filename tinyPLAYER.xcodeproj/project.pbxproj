@@ -21,6 +21,7 @@
 		3A320766DBB353DD35862A73 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF21A0BDB0EA0B443A55AD4E /* WindowManager.swift */; };
 		3F59583FE38A9E61BC685DF5 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851DBC88313C4E078D2C725 /* SharingService.swift */; };
 		3F82573AF55D8D3EB58EB758 /* MockMusicServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D9B2E09D21F911CF057496 /* MockMusicServiceTests.swift */; };
+		4AB1ED70E3173AEAAA52A3DE /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA7E7AF033FF512847391C /* PlayerView.swift */; };
 		4F7B6496D4A61ADCAEFB649B /* tinyPLAYERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C1BEA94CDCC85ACA3AFC5 /* tinyPLAYERApp.swift */; };
 		55941B1F3399DDB71A07C1C5 /* RadioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD9E47D1CB22A16A1511F /* RadioService.swift */; };
 		6525B91FA7C752C18EC6ECB8 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC93A22EAF7D9FE7067264 /* FloatingPanel.swift */; };
@@ -31,6 +32,7 @@
 		745E052B06E311FB95CF498F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA6197DC759F12DC3B00B5 /* ThemeManager.swift */; };
 		77EFA25F48FF83DB0BCF0018 /* ColorHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */; };
 		7B4F2B170ED315CE8471DEC0 /* ActionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB029EABEE1AA15245C13A1 /* ActionBarView.swift */; };
+		8A26033628F6D1F100AE0C05 /* PlayerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7335481A725FFBEF4FE30351 /* PlayerViewTests.swift */; };
 		8C3B3100C0C806C4784F9CC3 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB7091E3C895578DD240382 /* ControlsView.swift */; };
 		93050F2F9F61D736A158A3DC /* tinyPLAYERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE86678DA3A414B6F95A744 /* tinyPLAYERTests.swift */; };
 		93CB9B8C0DA5103C2DA782A6 /* ActionBarViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83202DD54B2DCA2DC50C8D /* ActionBarViewTests.swift */; };
@@ -43,6 +45,7 @@
 		CDBF6610A9EED4BC4ADFEAEE /* ScoreBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0B3E161769F14410FC54F /* ScoreBrowserView.swift */; };
 		CFF4C7AC26B212FD73C03455 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8F27D400F2C63E27B13833 /* AppTheme.swift */; };
 		E7D9FE543A59C511D37B6C93 /* Palettes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A0E2CF894F7BC2786114D3 /* Palettes.swift */; };
+		F65147EA9847348707D7F267 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85172E5083D397A9729C11 /* MiniPlayerView.swift */; };
 		FC15738B8BE97CD18F11C764 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C88D86E33A3DFE89A485C04 /* ArtworkView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		07B1910C5EDC540EBCC40288 /* TrackInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoView.swift; sourceTree = "<group>"; };
+		0BEA7E7AF033FF512847391C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		14BD1B5101C33491E8E9F0FE /* AppleScriptBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptBridge.swift; sourceTree = "<group>"; };
 		1851DBC88313C4E078D2C725 /* SharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingService.swift; sourceTree = "<group>"; };
 		1B653E5959577FDBD8CA06E5 /* SettingsDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDrawer.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		53AEFBEDB5A74FF08817010F /* ScoreBrowserViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBrowserViewTests.swift; sourceTree = "<group>"; };
 		62A352F433BB9B8853A6BD5F /* MockMusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMusicService.swift; sourceTree = "<group>"; };
 		66A0B3E161769F14410FC54F /* ScoreBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBrowserView.swift; sourceTree = "<group>"; };
+		7335481A725FFBEF4FE30351 /* PlayerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewTests.swift; sourceTree = "<group>"; };
 		78FF3160A712AF27AD162222 /* SharingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingServiceTests.swift; sourceTree = "<group>"; };
 		7A7018CED0506A8820A3B5AB /* tinyPLAYER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tinyPLAYER.xcdatamodel; sourceTree = "<group>"; };
 		7C8F27D400F2C63E27B13833 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		E13C433F53EA6CF4105B8B65 /* ControlsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewTests.swift; sourceTree = "<group>"; };
 		E3A3AF132A25F0FA547D6D77 /* ColorHexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexTests.swift; sourceTree = "<group>"; };
 		E4A0E2CF894F7BC2786114D3 /* Palettes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palettes.swift; sourceTree = "<group>"; };
+		EB85172E5083D397A9729C11 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		ECAA6197DC759F12DC3B00B5 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		F02EF0D9C37758F12E136192 /* MusicServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServiceProtocol.swift; sourceTree = "<group>"; };
 		F33DDD7AAD078502C466A406 /* ScoreStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreStore.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				C18E1BE12124E11DFB82C2B7 /* GreekGradeTests.swift */,
 				62A352F433BB9B8853A6BD5F /* MockMusicService.swift */,
 				A6D9B2E09D21F911CF057496 /* MockMusicServiceTests.swift */,
+				7335481A725FFBEF4FE30351 /* PlayerViewTests.swift */,
 				39B301AF10DF723381D6AB73 /* RadioServiceTests.swift */,
 				53AEFBEDB5A74FF08817010F /* ScoreBrowserViewTests.swift */,
 				89DDB72C4C3BA95A7169C21C /* ScoreStoreTests.swift */,
@@ -196,6 +203,8 @@
 				4AB029EABEE1AA15245C13A1 /* ActionBarView.swift */,
 				8C88D86E33A3DFE89A485C04 /* ArtworkView.swift */,
 				CBB7091E3C895578DD240382 /* ControlsView.swift */,
+				EB85172E5083D397A9729C11 /* MiniPlayerView.swift */,
+				0BEA7E7AF033FF512847391C /* PlayerView.swift */,
 				66A0B3E161769F14410FC54F /* ScoreBrowserView.swift */,
 				1B653E5959577FDBD8CA06E5 /* SettingsDrawer.swift */,
 				07B1910C5EDC540EBCC40288 /* TrackInfoView.swift */,
@@ -306,9 +315,11 @@
 				8C3B3100C0C806C4784F9CC3 /* ControlsView.swift in Sources */,
 				6525B91FA7C752C18EC6ECB8 /* FloatingPanel.swift in Sources */,
 				0CB7DB73C8D970B443D0D11E /* GreekGrade.swift in Sources */,
+				F65147EA9847348707D7F267 /* MiniPlayerView.swift in Sources */,
 				7374931C8B8E86B676F94F9E /* MusicService.swift in Sources */,
 				197A671DD8C0C2BFC69AFF83 /* MusicServiceProtocol.swift in Sources */,
 				E7D9FE543A59C511D37B6C93 /* Palettes.swift in Sources */,
+				4AB1ED70E3173AEAAA52A3DE /* PlayerView.swift in Sources */,
 				55941B1F3399DDB71A07C1C5 /* RadioService.swift in Sources */,
 				CDBF6610A9EED4BC4ADFEAEE /* ScoreBrowserView.swift in Sources */,
 				20021C03B87EB096D211DFD9 /* ScoreStore.swift in Sources */,
@@ -335,6 +346,7 @@
 				C40CF44D7B68EBF2C6845AA9 /* GreekGradeTests.swift in Sources */,
 				AE29277FA7CEF2AB28A70D61 /* MockMusicService.swift in Sources */,
 				3F82573AF55D8D3EB58EB758 /* MockMusicServiceTests.swift in Sources */,
+				8A26033628F6D1F100AE0C05 /* PlayerViewTests.swift in Sources */,
 				0C98568902F76FF04073665E /* RadioServiceTests.swift in Sources */,
 				A4218F2D57AE032653F0F06D /* ScoreBrowserViewTests.swift in Sources */,
 				050FDB14CAD5594A5BE6B738 /* ScoreStoreTests.swift in Sources */,
