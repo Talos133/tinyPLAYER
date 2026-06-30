@@ -9,6 +9,8 @@ struct ActionBarView: View {
 
     @State private var showScorePicker    = false
     @State private var showRadioSheet     = false
+    @State private var showPlaylistNaming = false
+    @State private var playlistName       = ""
     @Binding var showSettings: Bool
 
     var body: some View {
@@ -37,6 +39,19 @@ struct ActionBarView: View {
                 Button("Play Station Now") {
                     Task { try? await radio.createStation(seedSongID: music.currentSongID ?? "") }
                 }
+                Button("Play & Save as Playlist…") {
+                    showPlaylistNaming = true
+                    Task { try? await radio.createStation(seedSongID: music.currentSongID ?? "") }
+                }
+            }
+            .alert("Name Playlist", isPresented: $showPlaylistNaming) {
+                TextField("Playlist name", text: $playlistName)
+                Button("Save") {
+                    let name = playlistName
+                    playlistName = ""
+                    Task { try? await radio.saveAsPlaylist(name: name) }
+                }
+                Button("Cancel", role: .cancel) { playlistName = "" }
             }
 
             // Share — uses NSView bridge for NSSharingServicePicker
