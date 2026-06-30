@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- No sandbox: required for local ad-hoc builds without an Apple Developer Team.
+	     The sandbox entitlement is enforced by macOS only when backed by a real
+	     provisioning profile; without one it causes "damaged app" errors. -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+</dict>
+</plist>
