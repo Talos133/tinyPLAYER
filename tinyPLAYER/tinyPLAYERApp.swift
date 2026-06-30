@@ -4,13 +4,12 @@ import CoreData
 @main
 struct tinyPLAYERApp: App {
 
-    let persistenceController = PersistenceController.shared
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
-        WindowGroup {
-            Text("tinyPLAYER")
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+        // The actual window is owned by AppDelegate via FloatingPanel (NSPanel).
+        // A Settings scene is required to satisfy the SwiftUI App protocol on macOS.
+        Settings { EmptyView() }
     }
 }
 
