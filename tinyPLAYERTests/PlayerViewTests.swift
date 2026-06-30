@@ -26,24 +26,6 @@ final class PlayerViewTests: XCTestCase {
         return ScoreStore(context: container.viewContext)
     }
 
-    // MARK: - Frame sizes (constants encoded in the view)
-
-    /// PlayerView is defined with .frame(width: 360, height: 360)
-    func test_playerView_frameSize_is360x360() {
-        let width:  CGFloat = 360
-        let height: CGFloat = 360
-        XCTAssertEqual(width,  360)
-        XCTAssertEqual(height, 360)
-    }
-
-    /// MiniPlayerView is defined with .frame(width: 145, height: 72)
-    func test_miniPlayerView_frameSize_is145x72() {
-        let width:  CGFloat = 145
-        let height: CGFloat = 72
-        XCTAssertEqual(width,  145)
-        XCTAssertEqual(height, 72)
-    }
-
     // MARK: - Grade derivation (currentGrade computed property logic)
 
     /// When there is no scored song, currentGrade is nil
@@ -90,53 +72,6 @@ final class PlayerViewTests: XCTestCase {
             .flatMap { GreekGrade(score: Int($0.scoreValue)) }
 
         XCTAssertNil(grade)
-    }
-
-    // MARK: - showSettings toggle (PlayerView state)
-
-    /// showSettings starts false
-    func test_showSettings_defaultsFalse() {
-        var showSettings = false
-        XCTAssertFalse(showSettings)
-        _ = showSettings // silence unused-variable warning
-    }
-
-    /// Toggling showSettings to true shows SettingsDrawer
-    func test_showSettings_toggleTrue_showsSettingsDrawer() {
-        var showSettings = false
-        showSettings.toggle()
-        XCTAssertTrue(showSettings, "After toggle, showSettings should be true")
-    }
-
-    /// Toggling showSettings twice returns to false (drawer hides)
-    func test_showSettings_toggleTwice_returnsFalse() {
-        var showSettings = false
-        showSettings.toggle()
-        showSettings.toggle()
-        XCTAssertFalse(showSettings, "Double-toggle should return showSettings to false")
-    }
-
-    // MARK: - showBrowser toggle (PlayerView state)
-
-    /// showBrowser starts false
-    func test_showBrowser_defaultsFalse() {
-        var showBrowser = false
-        XCTAssertFalse(showBrowser)
-        _ = showBrowser
-    }
-
-    /// Setting showBrowser = true triggers sheet presentation
-    func test_showBrowser_setTrue_opensSheet() {
-        var showBrowser = false
-        showBrowser = true
-        XCTAssertTrue(showBrowser, "showBrowser = true should open the ScoreBrowser sheet")
-    }
-
-    /// Dismissing sets showBrowser back to false
-    func test_showBrowser_dismiss_setsFalse() {
-        var showBrowser = true
-        showBrowser = false
-        XCTAssertFalse(showBrowser, "Dismissing sheet sets showBrowser back to false")
     }
 
     // MARK: - MiniPlayerView icon selection
