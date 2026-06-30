@@ -12,6 +12,7 @@ final class MockMusicService: MusicServiceProtocol, ObservableObject {
     @Published var playbackProgress: Double  = 0.0
     @Published var inLibrary:        Bool    = true
     @Published var currentSongID:    String? = "mock-id-001"
+    @Published var currentSongURL:   URL?    = nil
 
     var playCalled              = false
     var pauseCalled             = false

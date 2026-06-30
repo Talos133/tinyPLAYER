@@ -7,9 +7,12 @@ enum SharingService {
     /// Shows NSSharingServicePicker for AirDrop / Messages / Mail.
     static func share(title: String, artist: String, url: URL?,
                       relativeTo sourceRect: NSRect, in view: NSView) {
-        let text  = "\(title) — \(artist)"
-        var items: [Any] = [text]
-        if let url = url { items.append(url) }
+        let items: [Any]
+        if let url = url, let songID = url.pathComponents.last, !songID.isEmpty {
+            items = buildShareItems(for: songID, title: title, artist: artist)
+        } else {
+            items = ["\(title) — \(artist)"]
+        }
 
         let picker = NSSharingServicePicker(items: items)
         picker.show(relativeTo: sourceRect, of: view, preferredEdge: .minY)

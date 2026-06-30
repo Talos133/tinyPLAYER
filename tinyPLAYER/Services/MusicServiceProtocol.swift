@@ -11,6 +11,7 @@ protocol MusicServiceProtocol: AnyObject, ObservableObject {
     var playbackProgress: Double  { get }
     var inLibrary:        Bool    { get }
     var currentSongID:    String? { get }
+    var currentSongURL:   URL?    { get }
 
     func play()              async throws
     func pause()

@@ -57,7 +57,7 @@ struct ActionBarView: View {
             // Share — uses NSView bridge for NSSharingServicePicker
             ShareButtonView(title: music.currentTitle,
                             artist: music.currentArtist,
-                            url: music.artworkURL)
+                            url: music.currentSongURL)
 
             Spacer()
 

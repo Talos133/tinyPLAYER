@@ -17,6 +17,11 @@ final class MusicService: MusicServiceProtocol, ObservableObject {
     @Published var inLibrary:        Bool    = false
     @Published var currentSongID:    String? = nil
 
+    var currentSongURL: URL? {
+        guard let id = currentSongID else { return nil }
+        return URL(string: "music://music.apple.com/song/\(id)")
+    }
+
     // MARK: - Private
 
     private let player = ApplicationMusicPlayer.shared
